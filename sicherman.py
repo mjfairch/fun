@@ -35,7 +35,7 @@ if __name__ == '__main__':
     dice1 = trim(itertools.product([1], vals, vals, vals, vals, vals))
     cnt = 0
     for firstDie in dice1:
-        # Enumerate all possible six-sided dice with pips in (m2,M2)
+        # Enumerate six-sided dice with pips in (m2,M2), up to face ordering
         vals = range(1, 12 - max(firstDie) + 1)
         dice2 = trim(itertools.product([1], vals, vals, vals, vals, vals))
         for secondDie in dice2:
